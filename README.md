@@ -43,3 +43,21 @@ flex-wrap: wrap-reverse; (한 줄이 되지 않아도 아래에서 위로 정렬
 
 justify-content와 비슷하지만 'line'에 관한 것 (각 block이 여러 행에 걸쳐 나올 때, 행간 공백을 얼마나 둘 건지?)
 ex)align-content: flex-start; - align-content: space-around;
+
+[flex-shrink] 
+
+flexbox가 작아질 때, element의 행동의 정의함
+디폴트값 1
+ex) flex-wrap: nowrap일때, 화면이 작아지면 width가 설정되어있어도 줄어듬.
+flex-shrink: 1; flex-shrink: n(정수); --> 여러 개 element 중 특정 element만 덜 줄어들거나, 더 줄어들게 할 수 있음
+
+
+[flex-grow] 
+
+shrink와 반대, 화면이 늘어남에 따라 box 크기가 얼마나 늘어날지 설정
+디폴트값 0
+flex-grow: 1; flex-grow: 0; 남아있는 공간을 가져옴 (space를 없애고)
+남아있는 공간, 여백이 있을 때만 grow 가능
+화면이 커질 때, element도 함께 커지길 원할 때 사용
+flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화면이 커져도 각 element 크기가 커지지 않음 (여백만 늘어나게 됨)
+
