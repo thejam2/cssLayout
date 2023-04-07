@@ -67,3 +67,4 @@ flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화�
 shrink, grow 되기전에 element에게 초기 size를 줌
 but 자주 사용 X basis 정의 안할시 width와 같은 값이니까.
 
+flex 연습 사이트 : https://flexboxfroggy.com/#ko
