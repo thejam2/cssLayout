@@ -1,7 +1,7 @@
 # cssLayout
 cssLayout 연습
 
-{flex}
+flex
 
 display:flex	//바로위 부모한테 적용해야함 (inline-block같은 효과)
 
@@ -68,3 +68,24 @@ shrink, grow 되기전에 element에게 초기 size를 줌
 but 자주 사용 X basis 정의 안할시 width와 같은 값이니까.
 
 flex 연습 사이트 : https://flexboxfroggy.com/#ko
+
+-----------------------------------------------------------------------------------
+
+grid
+
+[grid-template-rows]
+
+그리드 행의 크기 조절
+
+[grid-template-columns]
+
+그리드 열의 크기 조절
+
+[gap]
+gap은 행과 열 사이의 간격을 설정합니다.
+row-gap 및 column-gap의 단축어입니다.
+gap: 10%;
+gap: 10px 20px;
+gap: calc(20px + 10%);
+
+
