@@ -61,3 +61,10 @@ flex-grow: 1; flex-grow: 0; 남아있는 공간을 가져옴 (space를 없애고
 화면이 커질 때, element도 함께 커지길 원할 때 사용
 flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화면이 커져도 각 element 크기가 커지지 않음 (여백만 늘어나게 됨)
 
+
+[flex-basis]
+
+shrink, grow 되기전에 element에게 초기 size를 줌
+but 자주 사용 X basis 정의 안할시 width와 같은 값이니까.
+
+flex 연습 사이트 : https://flexboxfroggy.com/#ko
