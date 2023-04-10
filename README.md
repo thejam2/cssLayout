@@ -1,7 +1,7 @@
 # cssLayout
 cssLayout 연습
 
-flex
+## flex
 
 display:flex	//바로위 부모한테 적용해야함 (inline-block같은 효과)
 
@@ -71,7 +71,7 @@ flex 연습 사이트 : https://flexboxfroggy.com/#ko
 
 -----------------------------------------------------------------------------------
 
-grid
+## grid
 
 [grid-template-rows]
 
@@ -84,8 +84,36 @@ grid
 [gap]
 gap은 행과 열 사이의 간격을 설정합니다.
 row-gap 및 column-gap의 단축어입니다.
+```
 gap: 10%;
 gap: 10px 20px;
 gap: calc(20px + 10%);
+```
 
+
+grid-template-columns와 grid-template-rows에서
+repeat([개수], [크기])으로 더 쉽게 할 수 있다.
+auto를 사용하면 최대한 크게 만들어준다.
+
+
+[grid-template-areas]
+grid-area에 있는 이름과 grid-template-areas에 있는 이름이 같아야 한다.
+class 이름은 상관없다.
+```
+.grid {
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+    grid-template-areas:
+      "header header header header"
+      "content content content nav"
+      "content content content nav"
+      "footer footer footer footer";
+  }
+  
+  .header {
+    background-color: #2ecc71;
+    grid-area: header;
+  }
+```
 
