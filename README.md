@@ -117,3 +117,23 @@ class 이름은 상관없다.
   }
 ```
 
+[grid-column-start], [grid-row-start]
+
+grid-column-start는 그리드 배치에 line, span을 통해 그리드 열 내에서 그리드 아이템의 시작 위치를 지정합니다. 이 시작 위치는 그리드 영역의 블록 시작 가장자리를 정의합니다.
+grid-column-start: auto;
+grid-column-start: 2;
+grid-column-start: -1;  (마지막라인= -1)
+grid-column-start: span 2; (줄이 아닌 블럭의 영역을 지정)
+
+[grid-column-end], [grid-row-end]
+
+그리드 항목의 끝 위치를 지정함으로써 그리드 영역의 블록 끝 가장자리를 지정합니다.
+
+grid-column: (start) / (end);
+
+grid-row: (start) / (end);
+
+-1, -2, -3, ··· -> 끝에서부터 line 세기
+
+(start) / span (cell 수) -> 시작점과 끝점을 적는걸 대신한다.
+
