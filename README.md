@@ -31,40 +31,49 @@ order CSS 속성은 플렉스 또는 그리드 컨테이너 안에서 현재 요
 [flex-wrap]
 
 flexbox는 width보다도, '같은 줄'에 있도록 하는 것을 우선시함
+
 flex-wrap: wrap; (child의 사이즈를 유지하라고 하는 것)
+
 nowrap; (child를 모두 같은 줄에 정렬함, 이때 width가 줄어들 수 있음, 디폴트)
 
 [reverse]
 
 flex-direction: row-reverse; (오른쪽에서부터 1이 시작)
+
 flex-wrap: wrap-reverse; (한 줄이 되지 않아도 아래에서 위로 정렬되게)
 
 [align-content]
 
 justify-content와 비슷하지만 'line'에 관한 것 (각 block이 여러 행에 걸쳐 나올 때, 행간 공백을 얼마나 둘 건지?)
+
 ex)align-content: flex-start; - align-content: space-around;
 
 [flex-shrink] 
 
-flexbox가 작아질 때, element의 행동의 정의함
-디폴트값 1
+flexbox가 작아질 때, element의 행동의 정의함(디폴트값 1)
+
 ex) flex-wrap: nowrap일때, 화면이 작아지면 width가 설정되어있어도 줄어듬.
+
 flex-shrink: 1; flex-shrink: n(정수); --> 여러 개 element 중 특정 element만 덜 줄어들거나, 더 줄어들게 할 수 있음
 
 
 [flex-grow] 
 
-shrink와 반대, 화면이 늘어남에 따라 box 크기가 얼마나 늘어날지 설정
-디폴트값 0
+shrink와 반대, 화면이 늘어남에 따라 box 크기가 얼마나 늘어날지 설정(디폴트값 0)
+
 flex-grow: 1; flex-grow: 0; 남아있는 공간을 가져옴 (space를 없애고)
+
 남아있는 공간, 여백이 있을 때만 grow 가능
+
 화면이 커질 때, element도 함께 커지길 원할 때 사용
+
 flex-grow property가 0인 상태거나, 따로 정의되지 않았다면, 화면이 커져도 각 element 크기가 커지지 않음 (여백만 늘어나게 됨)
 
 
 [flex-basis]
 
 shrink, grow 되기전에 element에게 초기 size를 줌
+
 but 자주 사용 X basis 정의 안할시 width와 같은 값이니까.
 
 flex 연습 사이트 : https://flexboxfroggy.com/#ko
@@ -83,6 +92,7 @@ flex 연습 사이트 : https://flexboxfroggy.com/#ko
 
 [gap]
 gap은 행과 열 사이의 간격을 설정합니다.
+
 row-gap 및 column-gap의 단축어입니다.
 ```
 gap: 10%;
@@ -91,13 +101,14 @@ gap: calc(20px + 10%);
 ```
 
 
-grid-template-columns와 grid-template-rows에서
-repeat([개수], [크기])으로 더 쉽게 할 수 있다.
+grid-template-columns와 grid-template-rows에서 repeat([개수], [크기])으로 더 쉽게 할 수 있다.
+
 auto를 사용하면 최대한 크게 만들어준다.
 
 
 [grid-template-areas]
 grid-area에 있는 이름과 grid-template-areas에 있는 이름이 같아야 한다.
+
 class 이름은 상관없다.
 ```
 .grid {
@@ -119,21 +130,44 @@ class 이름은 상관없다.
 
 [grid-column-start], [grid-row-start]
 
-grid-column-start는 그리드 배치에 line, span을 통해 그리드 열 내에서 그리드 아이템의 시작 위치를 지정합니다. 이 시작 위치는 그리드 영역의 블록 시작 가장자리를 정의합니다.
+grid-column-start는 그리드 배치에 line, span을 통해 그리드 열 내에서 그리드 아이템의 시작 위치를 지정합니다.
+
+이 시작 위치는 그리드 영역의 블록 시작 가장자리를 정의합니다.
+
+```
 grid-column-start: auto;
 grid-column-start: 2;
 grid-column-start: -1;  (마지막라인= -1)
 grid-column-start: span 2; (줄이 아닌 블럭의 영역을 지정)
+```
 
 [grid-column-end], [grid-row-end]
 
 그리드 항목의 끝 위치를 지정함으로써 그리드 영역의 블록 끝 가장자리를 지정합니다.
 
+```
 grid-column: (start) / (end);
-
 grid-row: (start) / (end);
+```
 
 -1, -2, -3, ··· -> 끝에서부터 line 세기
 
 (start) / span (cell 수) -> 시작점과 끝점을 적는걸 대신한다.
+
+[fr]
+
+fr-fraction(부분)
+fraction은 grid에서 사용 가능한 공간을 뜻한다.
+fr값 비율로 공간을 나눈다.
+
+[grid-template]
+
+```
+"(이름)" (row크기)
+"(이름)" (row크기)
+"(이름)" (row크기)/ (각 column의 크기);
+```
+grid-template에서는 reapeat 안됨
+
+
 
