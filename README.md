@@ -169,5 +169,13 @@ fr값 비율로 공간을 나눈다.
 ```
 grid-template에서는 reapeat 안됨
 
-
+```
+justify-items : 수평
+align-items : 수직
+place-items: (수직) (수평);
+stretch : grid를 늘려서 grid를 채우게 한다.
+start : item을 cell 시작에 배치한다.
+center : item을 cell 중앙에 배치한다.
+end : item을 cell 끝에 배치한다.
+```
 
