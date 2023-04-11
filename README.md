@@ -169,6 +169,8 @@ fr값 비율로 공간을 나눈다.
 ```
 grid-template에서는 reapeat 안됨
 
+
+[place items]
 ```
 justify-items : 수평
 align-items : 수직
@@ -179,3 +181,14 @@ center : item을 cell 중앙에 배치한다.
 end : item을 cell 끝에 배치한다.
 ```
 
+[place content]
+```
+justify-content : 수평; /*(그리드가 놓이는 위치를 뜻하며 기본은 start)*/
+align-content : 수직;
+place-content : 수직 수평;
+start, end, space-evenly, space-around, space-between 사용
+```
+
+컨테이너의 height가 그리드를 담을 만큼 충분해야한다.(높이 지정)
+
+place-items는 셀안에서 항목이 이동하는 것이며, place-content는 그리드가 이동하는 것
