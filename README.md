@@ -192,3 +192,25 @@ start, end, space-evenly, space-around, space-between 사용
 컨테이너의 height가 그리드를 담을 만큼 충분해야한다.(높이 지정)
 
 place-items는 셀안에서 항목이 이동하는 것이며, place-content는 그리드가 이동하는 것
+
+```
+align-self : 수직
+justify-self : 수평
+place-self: 수직 수평;
+//child에만 적용돠는 property이다.
+```
+
+`grid-auto-rows: 크기;`
+만들어놓은 row보다 더 많은 content가 있으면, 자동으로 row를 만들어라.
+
+```
+grid-auto-flow: 방향; [기본값: row]
+flex-direction과 비슷
+row가 끝날 때 새로운 row를 만들지, 새로운 column을 만들지 결정한다.
+```
+
+```
+grid-auto-columns: 크기;
+grid-auto-flow: column;일때 작동.
+```
+
