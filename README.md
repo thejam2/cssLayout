@@ -206,3 +206,18 @@ grid-auto-flow: column;일때 작동.
 
 ### minmax
 `grid-template-columns: repeat(5, minmax(100px, 1fr));` =>최소 100px, 최대 1FR
+
+
+### auto-fill, auto-fit
+```
+Grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); //창 너비가 늘어나면 빈 column들로 row를 채움
+Grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); // 창 너비가 늘어나면 element를 늘려서 row에 맞게 해줌
+```
+
+
+### max-content
+content의 크기만큼 cell의 크기를 늘린다.
+
+### min-content
+content의 크기를 최대한 줄여 cell의 크기를 줄인다.
+
