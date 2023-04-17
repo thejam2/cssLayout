@@ -221,3 +221,4 @@ content의 크기만큼 cell의 크기를 늘린다.
 ### min-content
 content의 크기를 최대한 줄여 cell의 크기를 줄인다.
 
+### grid 연습 사이트 : http://cssgridgarden.com/
